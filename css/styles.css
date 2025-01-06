@@ -1,92 +1,92 @@
-/* Reset and Base Styles */
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body Styling */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #333;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-/* Navigation Styles */
+/* Navigation Bar Styling */
 header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: rgba(206, 204, 204, 0.9);
-    padding: 10px 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: flex-end;
-    gap: 20px;
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: right; /* Right-align the nav items */
 }
 
-nav ul li a {
-    font-weight: bold;
-    padding: 10px 15px;
-    transition: background 0.3s;
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
 }
 
-nav ul li a:hover {
-    background: #007BFF;
-    color: #cdcaca;
-    border-radius: 5px;
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
 }
 
-/* Hero Section */
-.hero {
-    height: 100vh;
-    background: url('images/hero-bg.jpg') no-repeat center center/cover;
+header nav ul li a:hover,
+header nav ul li a.active {
+    color: #ff7f50; /* Highlight active link */
+}
+
+/* Hero Section Styling */
+.hero, .hero-section {
+    background-image: url('../images/hero-bg.jpg'); /* Adjust path as needed */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 80vh; /* Set the height to 80% of the viewport height */
+    padding: 0;
+    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #d9d7d7;
-    text-align: center;
 }
 
 .hero-content {
-    max-width: 600px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .hero h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom: 20px;
 }
 
 .hero p {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     margin-bottom: 20px;
 }
 
-.btn {
-    display: inline-block;
+.hero .btn {
     padding: 10px 20px;
-    background: #007BFF;
-    color: #fff;
+    background-color: #ff7f50;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
     border-radius: 5px;
-    transition: background 0.3s;
 }
 
-.btn:hover {
-    background: #0056b3;
+.hero .btn:hover {
+    background-color: #ff6347;
 }
 
-/* Section Styles */
+/* Section Styling */
 section {
-    padding: 60px 20px;
+    padding: 40px 20px;
     text-align: center;
 }
 
@@ -96,16 +96,74 @@ section h2 {
 }
 
 section p {
-    font-size: 1rem;
-    max-width: 800px;
-    margin: 0 auto;
+    font-size: 1.1rem;
 }
 
-/* Footer Styles */
+/* About Section Styling */
+#about {
+    background-color: #f4f4f4;
+}
+
+/* Projects Section Styling */
+#projects {
+    background-color: #fff;
+}
+
+/* Student Resources Section Styling */
+#student-resources {
+    background-color: #f4f4f4;
+}
+
+#student-resources h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#student-resources p {
+    font-size: 1.1rem;
+}
+
+/* Footer Styling */
 footer {
-    background: #333;
-    color: #fff;
+    background-color: #333;
+    color: white;
     text-align: center;
     padding: 20px;
-    margin-top: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Link Styling */
+a {
+    color: #ff7f50;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ff6347;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    header nav ul {
+        text-align: center;
+    }
+
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
 }
