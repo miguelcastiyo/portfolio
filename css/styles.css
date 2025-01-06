@@ -48,7 +48,7 @@ header nav ul li a.active {
     background-size: cover;
     background-position: center;
     color: white;
-    height: 80vh; /* Set the height to 80% of the viewport height */
+    height: 70vh; /* Set the height to 80% of the viewport height */
     padding: 0;
     text-align: center;
     display: flex;
@@ -73,7 +73,7 @@ header nav ul li a.active {
 
 .hero .btn {
     padding: 10px 20px;
-    background-color: #ff7f50;
+    background-color: #e5c24b;
     color: white;
     text-decoration: none;
     font-weight: bold;
@@ -125,14 +125,13 @@ section p {
 
 /* Footer Styling */
 footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
+    text-align: left;
     padding: 20px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    background-color: #333; /* You can change this to match your design */
+    color: white;
+    font-size: 14px;
 }
+
 
 footer p {
     font-size: 1rem;
