@@ -10,9 +10,15 @@
     <!-- Navigation -->
     <header>
         <nav>
-            <ul>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <ul id="nav-list">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="student-resources.html">Student Resources</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -24,24 +30,35 @@
         <div class="hero-content">
             <h1>Hello, I’m Miguel Castillo</h1>
             <p>I specialize in software development and Computer Science education</p>
-            <a href="#about" class="btn">Learn More</a>
+            <a href="#experience" class="btn">Learn More</a>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects">
-        <h2>Projects</h2>
-        <p>Details about my projects will go here.</p>
+    <section id="experience">
+        <h2>Experience</h2>
+        
+        <h3>UrVenue</h3>
+            <ul>
+                <li>Technical Product Development Lead (Apr 2024 - Present)</li>
+                <li>Technical Product Owner (Jun 2023 - Apr 2024)</li>
+                <li>Junior Software Developer (Oct 2022 - Jun 2023)</li>
+            </ul>
+        <h3>College of Southern Nevada</h3>
+            <ul>
+                <li>Adjunct Computer Science Instructor (Aug 2023 - Present)</li>
+            </ul>
     </section>
+    
 
     <!-- Contact Section -->
-    <section id="contact">
+    <section id="education">
         <h2>Student Resources</h2>
         <p>Student Resources section will be here</p>
     </section>
 
     <!-- Contact Section -->
-    <section id="student-resources">
+    <section id="contact">
         <h2>Contact</h2>
         <p>Feel free to reach out via email.</p>
     </section>
@@ -50,5 +67,8 @@
     <footer>
         <p>&copy; 2025 Miguel Castillo</p>
     </footer>
+
+    <script src="js/script.js"></script>
+
 </body>
 </html>

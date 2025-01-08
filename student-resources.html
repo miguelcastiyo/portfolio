@@ -10,9 +10,15 @@
     <!-- Navigation Bar -->
     <header>
         <nav>
-            <ul>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <ul id="nav-list">
                 <li><a href="index.html">Home</a></li> <!-- Link to Home section in index.html -->
-                <li><a href="index.html#projects">Projects</a></li> <!-- Link to Projects section in index.html -->
+                <li><a href="index.html#experience">Experience</a></li> <!-- Link to Projects section in index.html -->
                 <li><a href="student-resources.html" class="active">Student Resources</a></li> <!-- Highlight active page -->
                 <li><a href="index.html#contact">Contact</a></li> <!-- Link to Contact section in index.html -->
             </ul>
@@ -29,14 +35,20 @@
     </section>
 
     <!-- Main Content -->
+    <main>
+        <section id="Syllabus">
+            <h2>Syllabus</h2>
+                <li><a href="https://miguelcastiyo.github.io/Syllabus-CS135/" target="_blank">CS135 Spring 2025 (Link)</a></li>
+                <li><a href="../resources/CS135-spring2025-Syllabus.pdf" download>CS135 Spring 2025 (PDF)</a></li>
+        </section>
+    </main>
 
-    <section id="syllabus">
-        <h2>Syllabus</h2>
-        <p><a href="https://raw.githubusercontent.com/miguelcastiyo/portfolio/refs/heads/main/resources/CS135-spring2025-Syllabus.md?token=GHSAT0AAAAAAC42HNOOWDXSCV7BMP6OZTBUZ33JVYQ" target="_blank">View the Syllabus</a></p>
-    </section>
 
     <footer>
         <p>&copy; 2025 Miguel Castillo</p>
     </footer>
+
+    <script src="js/script.js"></script>
+
 </body>
 </html>

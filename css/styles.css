@@ -14,7 +14,7 @@ body {
 
 /* Navigation Bar Styling */
 header {
-    background-color: #333;
+    background-color: #5c391f;
     color: white;
     padding: 10px 0;
 }
@@ -23,7 +23,8 @@ header nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    text-align: right; /* Right-align the nav items */
+    display: flex; /* Use flexbox to align items */
+    justify-content: flex-end; /* Align items to the right */
 }
 
 header nav ul li {
@@ -48,7 +49,7 @@ header nav ul li a.active {
     background-size: cover;
     background-position: center;
     color: white;
-    height: 70vh; /* Set the height to 80% of the viewport height */
+    height: 60vh; /* Set the height to 80% of the viewport height */
     padding: 0;
     text-align: center;
     display: flex;
@@ -127,9 +128,11 @@ section p {
 footer {
     text-align: left;
     padding: 20px;
-    background-color: #333; /* You can change this to match your design */
+    background-color: #5c391f; /* You can change this to match your design */
     color: white;
     font-size: 14px;
+    font-size: 1rem;
+    margin-top: auto; /* Push footer to the bottom */
 }
 
 
@@ -147,22 +150,141 @@ a:hover {
     color: #ff6347;
 }
 
-/* Mobile Responsiveness */
+/* Syllabi Section */
+#syllabus {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    text-align: left; /* Ensure text is left-aligned */
+}
+
+#syllabus h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px; /* Space between label and links */
+}
+
+#syllabus ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#syllabus li {
+    margin: 10px 0;
+}
+
+#syllabus a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+#syllabus a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* Mobile Responsiven
+/* Mobile Menu (Hamburger Icon) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute; /* Position it relative to the header */
+    top: 20px; /* Add some space from the top */
+    right: 20px; /* Align it to the right */
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    background-color: white;
+}
+
+/* Media Query for Mobile Devices */
 @media screen and (max-width: 768px) {
-    header nav ul {
+    #nav-list {
+        display: none; /* Hide the menu items initially */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #333;
+        width: 100%;
         text-align: center;
     }
 
-    header nav ul li {
-        display: block;
+    #nav-list li {
         margin: 10px 0;
     }
 
-    .hero h1 {
-        font-size: 2.5rem;
+    .menu-toggle {
+        display: flex; /* Show the hamburger icon */
     }
 
-    .hero p {
-        font-size: 1.1rem;
+    #nav-list.active {
+        display: flex; /* Show the menu when it's active */
     }
+}
+
+/* General Reset for Sections */
+section {
+    margin: 0; /* Remove default margin */
+    padding: 20px 0; /* Add consistent padding */
+}
+
+/* Experience and Education Section Styling */
+#experience-education {
+    display: flex; /* Use flexbox to divide the space into two halves */
+    justify-content: space-between;
+    align-items: flex-start; /* Align the sections to the top */
+    padding: 20px 20px; /* Reduce padding for this section */
+    height: auto; /* Allow height to adjust dynamically */
+    margin-top: 0; /* Remove any top margin */
+}
+
+.experience, .education {
+    width: 45%; /* Each section takes up 45% of the width */
+    padding: 10px; /* Adjust padding to reduce space */
+    box-sizing: border-box;
+}
+
+.experience {
+    text-align: center; /* Center the content within the Experience section */
+}
+
+.education {
+    text-align: center; /* Center the content within the Education section */
+}
+
+/* Hero Section Adjustments */
+.hero {
+    padding-bottom: 20px; /* Reduce bottom padding to close the gap */
+}
+
+/* Section Headers */
+h2 {
+    font-size: 2rem;
+    margin-bottom: 10px; /* Reduce space below headers */
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5px; /* Reduce space below subheaders */
+}
+
+/* List Styling */
+ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0; /* Remove extra space around lists */
+}
+
+li {
+    font-size: 1.1rem;
+    margin-bottom: 5px; /* Reduce space between list items */
 }
