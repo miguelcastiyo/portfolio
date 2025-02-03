@@ -1,74 +1,371 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="""en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Miguel Castillo</title>
+    <link rel="stylesheet" href="css/styles.css"> 
+    <link rel="stylesheet" href="css/mediaqueries.css"> 
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 <body>
-    <!-- Navigation -->
-    <header>
-        <nav>
-            <div class="menu-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+    <nav id="desktop-nav">
+        <div class="logo"> miguel castillo</div>
+        <div class="nav-links">
+            <ul class="nav-links">
+                <li><a href="#about">about</a></li>
+                <li><a href="#experience">experience</a></li>
+                <li><a href="#student">student resources</a></li>
+                <!-- <li><a href="#projects">projects</a></li> -->
+                <li><a href="#contact">contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav id="hamburger-nav">
+        <div class="logo"> miguel castillo</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span> </span>
+                <span> </span>
+                <span> </span>
+            </div>
+            <div class="menu-links">
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>   
+                <li><a href="#student" onclick="toggleMenu()">Student Resources</a></li>
+                <!-- <li><a href="#projects" onclick="toggleMenu()">Projects</a></li> -->
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+            </div>
+        </div>
+    </nav>
+
+    <section id="profile">
+        <div class="section__pic-container">
+            <img src="./images/avatartion.png" alt="Profile Picture">
+        </div>
+        <div class="section__text">
+            <p class="section__text__p1">hello  im </p>
+            <h1 class="title">miguel castillo</h1>
+            <p class="section__text__p2">product manager, cs professor</p>
+            <div class="btn-container">
+                <button class="btn btn-color-2" onclick="window.open('./images/Miguel_Castillo_Resume.pdf')">resume</button>
+                <button class="btn btn-color-1" onclick="location.href='./#contact'">contact me</button>
+            </div>
+            <div id="socials-container">
+                <img src="./images/linkedin.png" alt="""My LinkedIn Profile" class="icon" onclick="""location.href='https://www.linkedin.com/in/miguel-castillo-1431a5146/'">
+                <img src="./images/github.png" alt="My Github Profile" class="icon" onclick="location.href='https://github.com/miguelcastiyo'">
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <p class="section__text__p1">get to know more</p>
+        <h1 class="title">about me</h1>
+        <div class="section-container">
+            <div class="section__pic-container">
+                <img src="./images/avatartion-2.png" alt="Profile Picture" class="about-pic"/>
+            </div>
+            <div class="about-details-container">
+                <div class="about-containers">
+                    <div class="details-container">
+                        <img src="./images/experience.png" alt="experience icon" class="icon"/>
+                        <h3>experience</h3>
+                        <p>2+ years <br> product management</p>
+                    </div>
+                    <div class="details-container">
+                        <img src="./images/education.png" alt="education icon" class="icon"/>
+                        <h3>education</h3>
+                        <p>bs computer science <br> university of nevada, las vegas</p>
+                    </div>
+                </div>
+                <div class="text-container">
+                    <p> 
+                        im a technical product manager & computer science professor with a passion for 
+                        building scalable software solutions and mentoring the next generation of engineers. 
+                        by day, i lead product development in the hospitality tech industry, bridging 
+                        business needs with technical execution. by night (and sometimes early mornings), 
+                        i teach computer science at the college of southern nevada, where i make complex topics 
+                        more approachable.           
+                    </p>
+                    </div>
+        </div>
+        <img 
+            src="./images/arrow.png" 
+            alt="Arrow icon" 
+            class="icon arrow" 
+            onclick="location.href='./#experience'"
+        />
+    </section>
+    <section id="experience">
+        <p class="section__text__p1">explore my</p>
+        <h1 class="title">experience</h1>
+        <div class="experience-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <h2 class="experience-sub-title">my tech toolkit</h2>
+              <div class="article-container">
+
+                <article>
+                  <img
+                    src="./images/jira.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>jira</h3>
+                    <!-- <p>Experienced</p> -->
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./images/linux.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>linux</h3>
+                    <!-- <p>Intermediate</p> -->
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./images/git.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>git</h3>
+                    <!-- <p>Basic</p> -->
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./images/figma.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>figma</h3>
+                    <!-- <p>Basic</p> -->
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./images/database.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>mysql</h3>
+                    <!-- <p>Intermediate</p> -->
+                  </div>
+                </article>
+                <article>
+                    <img
+                      src="./images/postman.png"
+                      alt="Experience icon"
+                      class="icon"
+                    />
+                    <div>
+                      <h3>postman</h3>
+                      <!-- <p>Experienced</p> -->
+                    </div>
+                  </article>
+              </div>
+            </div>
+            <div class="details-container">
+              <h2 class="experience-sub-title">what i do best</h2>
+              <div class="article-container">
+                <article>
+                  <img
+                    src="./images/roadmap.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>product roadmaps</h3>
+                    <!-- <p>Basic</p> -->
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./images/documentation.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>technical documentation</h3>
+                    <!-- <p>Intermediate</p> -->
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./images/agile.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>agile mastery</h3>
+                    <!-- <p>Intermediate</p> -->
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./images/stakeholder.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>stakeholder management</h3>
+                    <!-- <p>Intermediate</p> -->
+                  </div>
+                </article>
+                <article>
+                    <img
+                      src="./images/leader.png"
+                      alt="Experience icon"
+                      class="icon"
+                    />
+                    <div>
+                      <h3>team leadership</h3>
+                      <!-- <p>Intermediate</p> -->
+                    </div>
+                  </article>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img
+          src="./images/arrow.png"
+          alt="Arrow icon"
+          class="icon arrow"
+          onclick="location.href='./#student'"
+        />
+    </section>
+
+    <!-- <section id="projects"> 
+        <p class="section__text__p1">Browse My Recent</p>
+        <h1 class="title">Projects</h1>
+        <div class="experience-details-container">
+            <div class="about-containers">
+            <div class="details-container color-container">
+                <div class="article-container"> 
+                    <img src="./images/project-1.png" alt="Project 1" class="project-img"/>
+                    
+                </div>
+                <h2 class="experience-sub-title project-title">Project 1</h2>
+                <div class="btn-container">
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
+                        Github
+                    </button>
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
+                        Live Demo
+                    </button>
+                </div>
+            </div>
+            <div class="details-container color-container">
+                <div class="article-container"> 
+                    <img src="./images/project-2.png" alt="Project 2" class="project-img"/>
+                    
+                </div>
+                <h2 class="experience-sub-title project-title">Project 2</h2>
+                <div class="btn-container">
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
+                        Github
+                    </button>
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
+                        Live Demo
+                    </button>
+                </div>
+            </div>
+            <div class="details-container color-container">
+                <div class="article-container"> 
+                    <img src="./images/project-3.png" alt="Project 3" class="project-img"/>
+                    
+                </div>
+                <h2 class="experience-sub-title project-title">Project 3</h2>
+                <div class="btn-container">
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
+                        Github
+                    </button>
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
+                        Live Demo
+                    </button>
+                </div>
+            </div> </div>
+        </div>
+        <img src="./images/arrow.png" alt="Scroll Icon" class="icon arrow" onclick="location.href='./#contact'"/>
+
+    </section> -->
+
+        <section id="student"> 
+        <p class="section__text__p1">check out this semesters</p>
+        <h1 class="title">student resources</h1>
+        <div class="student-details-container">
+            <div class="about-containers">
+            <div class="details-container color-container">
+                <div class="student-container"> 
+                    <img src="./images/code.png" alt="code" class="student-img"/>
+                    
+                </div>
+                <h2 class="experience-sub-title project-title">cs135 - intro to c++</h2>
+                <div class="btn-container">
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='./courses/cs135.html'">
+                        course page
+                    </button>
+                </div>
             </div>
 
-            <ul id="nav-list">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="student-resources.html">Student Resources</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+        <img src="./images/arrow.png" alt="Scroll Icon" class="icon arrow" onclick="location.href='./#contact'"/>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Hello, I’m Miguel Castillo</h1>
-            <p>I specialize in software development and Computer Science education</p>
-            <a href="#experience" class="btn">Learn More</a>
+    </section>
+
+
+
+    
+    <section id="contact">
+        <p class="section__text__p1">get in touch</p>
+        <h1 class="title">contact me</h1>
+        <div class="contact-info-upper-container">
+            <div class="contact-info-container">
+                <img src="./images/email.png" alt="Email Icon" class="icon" onclick="togglePopup()"/>  
+                <p><a onclick="togglePopup()" href="#contact" >email</a></p>
+            </div>
+            <div class="contact-info-container">
+                <img src="./images/linkedin.png" alt="LinkedIn Icon" class="icon"/>  
+                <p><a href="https://www.linkedin.com/in/miguel-castillo-1431a5146/">linkedin</a></p>
+            </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="experience">
-        <h2>Experience</h2>
-        
-        <h3>UrVenue</h3>
-            <ul>
-                <li>Technical Product Development Lead (Apr 2024 - Present)</li>
-                <li>Technical Product Owner (Jun 2023 - Apr 2024)</li>
-                <li>Junior Software Developer (Oct 2022 - Jun 2023)</li>
-            </ul>
-        <h3>College of Southern Nevada</h3>
-            <ul>
-                <li>Adjunct Computer Science Instructor (Aug 2023 - Present)</li>
-            </ul>
-    </section>
-    
+    <!-- Move popup outside of section -->
+    <div id="contact-popup" class="popup-overlay">
+        <div class="popup-content">
+            <span class="close-btn" onclick="togglePopup()">&times;</span>
+            <h2 class="experience-sub-title">send me a message</h2>
+            <form id="contact-form">
+                <input type="text" name="user_name" placeholder="your name" required>
+                <input type="email" name="user_email" placeholder="your email" required>
+                <textarea name="message" placeholder="your message" required></textarea>
+                <button type="submit" class="btn btn-color-2">send</button>
+            </form>
+        </div>
+    </div>
 
-    <!-- Contact Section -->
-    <section id="education">
-        <h2>Student Resources</h2>
-        <p>Student Resources section will be here</p>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Feel free to reach out via email.</p>
-    </section>
-
-    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Miguel Castillo</p>
+        <nav>
+            <div class="nav-links-container">
+                <ul class="nav-links">
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#experience">experience</a></li>
+                    <li><a href="#student">student resources</a></li>
+                    <!-- <li><a href="#projects">projects</a></li> -->
+                    <li><a href="#contact">contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <p>copyright &#169; 2025 miguel castillo all rights reserved</p>
     </footer>
-
+    
     <script src="js/script.js"></script>
-
-</body>
+    </body>
 </html>
