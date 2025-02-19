@@ -124,30 +124,6 @@ a:hover {
   max-height: 300px;
 }
 
-/* .hamburger-icon.open span:first-child {
-  transform: rotate(45deg) translate(10px, 5px);
-}
-
-.hamburger-icon.open span:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger-icon.open span:last-child {
-  transform: rotate(-45deg) translate(10px, -5px);
-} */
-
-.hamburger-icon span:first-child {
-  transform: none;
-}
-
-.hamburger-icon span:first-child {
-  opacity: 1;
-}
-
-.hamburger-icon span:first-child {
-  transform: none;
-}
-
 /* SECTIONS */
 
 section {
@@ -357,81 +333,82 @@ article .icon {
 
 /* Student Resources Section */
 #student {
-    position: relative;
+  position: relative;
 }
 
 .student-details-container {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .student-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 2rem;
-    width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  width: 100%;
 }
 
 .student-img {
-    border-radius: 2rem;
-    width: 400px;
-    height: auto;
-    object-fit: cover;
+  border-radius: 2rem;
+  width: 400px;
+  height: auto;
+  object-fit: cover;
 }
 
 .student-title {
-    color: rgb(85, 85, 85);
-    font-weight: 600;
-    font-size: 1.75rem;
-    margin-bottom: 2rem;
+  color: rgb(85, 85, 85);
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
 }
 
 /* Match container styling with experience section */
 .student-details-container .details-container {
-    padding: 1.5rem;
-    flex: 1;
-    background: white;
-    border-radius: 2rem;
-    border: rgb(53, 53, 53) 0.1rem solid;
-    border-color: rgb(163, 163, 163);
-    text-align: center;
+  padding: 1.5rem;
+  flex: 1;
+  background: white;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  text-align: center;
 }
 
 @media (max-width: 768px) {
-    .student-img {
-        width: 90%;
-        max-width: 400px;
-    }
-    .menu-links {
-        display: none;
-        background-color: white;
-        border-radius: 2rem;
-        position: absolute;
-        right: 0;
-        top: 100%;
-        padding: 0.5rem;
-        flex-direction: column; /* Ensure vertical list */
-    }
+  .student-img {
+    width: 90%;
+    max-width: 400px;
+  }
+  .menu-links {
+    display: none;
+    background-color: white;
+    border-radius: 2rem;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    padding: 0.5rem;
+    flex-direction: column; /* Ensure vertical list */
+  }
 
-    .menu-links.open {
-        display: flex;
-        border: rgb(53, 53, 53) 0.1rem solid;
-        border-color: rgb(163, 163, 163);
-        transition: all 0.3s ease-in-out;
-    }
+  .menu-links.open {
+    display: flex;
+    border: rgb(53, 53, 53) 0.1rem solid;
+    border-color: rgb(163, 163, 163);
+    transition: all 0.3s ease-in-out;
+  }
 
-    .hamburger-icon span {
-        width: 1.5rem;
-        height: 0.2rem;
-        background-color: black;
-        transition: all 0.3s ease-in-out;
-        border-radius: 0.2rem;
-        margin: 0.2rem;
-    }
+  .hamburger-icon span {
+    width: 1.5rem;
+    height: 0.2rem;
+    background-color: black;
+    transition: all 0.3s ease-in-out;
+    border-radius: 0.2rem;
+    margin: 0.2rem 0;
+  }
 }
+
 /* PROJECTS SECTION */
 
 #projects {
@@ -462,53 +439,53 @@ article .icon {
 /* CONTACT */
 
 #contact {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    height: 70vh;
-    padding: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 70vh;
+  padding: 2rem;
 }
 
 .contact-info-upper-container {
-    display: flex;
-    justify-content: center;
-    border-radius: 2rem;
-    border: rgb(53, 53, 53) 0.1rem solid;
-    border-color: rgb(163, 163, 163);
-    padding: 1rem;
-    gap: 2rem;
+  display: flex;
+  justify-content: center;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  padding: 1rem;
+  gap: 2rem;
 }
 
 .contact-info-container {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .contact-info-container img {
-    width: 2rem;
-    height: 2rem;
+  width: 2rem;
+  height: 2rem;
 }
 
 .contact-info-container p {
-    margin: 0;
+  margin: 0;
 }
 
 @media (max-width: 768px) {
-    #contact {
-        height: auto;
-        padding: 1rem;
-    }
+  #contact {
+    height: auto;
+    padding: 1rem;
+  }
 
-    .contact-info-upper-container {
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-    }
+  .contact-info-upper-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
 
-    .contact-info-container {
-        justify-content: center;
-    }
+  .contact-info-container {
+    justify-content: center;
+  }
 }
 
 /* FOOTER SECTION */
@@ -525,62 +502,136 @@ footer p {
 /* POPUP */
 
 .popup-overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 1000;
-    backdrop-filter: blur(5px);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  backdrop-filter: blur(5px);
 }
 
 .popup-content {
-    position: relative;
-    background: white;
-    width: 90%;
-    max-width: 500px;
-    margin: 20vh auto;
-    padding: 2rem;
-    border-radius: 2rem;
-    border: rgb(53, 53, 53) 0.1rem solid;
-    border-color: rgb(163, 163, 163);
+  position: relative;
+  background: white;
+  width: 90%;
+  max-width: 500px;
+  margin: 20vh auto;
+  padding: 2rem;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
 }
 
 .close-btn {
-    position: absolute;
-    right: 1.5rem;
-    top: 1rem;
-    font-size: 2rem;
-    cursor: pointer;
-    color: rgb(85, 85, 85);
+  position: absolute;
+  right: 1.5rem;
+  top: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+  color: rgb(85, 85, 85);
 }
 
 #contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.5rem;
 }
 
 #contact-form input,
 #contact-form textarea {
-    padding: 0.8rem;
-    border: 1px solid rgb(163, 163, 163);
-    border-radius: 0.5rem;
-    font-size: 1rem;
-    font-family: inherit;
+  padding: 0.8rem;
+  border: 1px solid rgb(163, 163, 163);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-family: inherit;
 }
 
 #contact-form textarea {
-    min-height: 150px;
-    resize: vertical;
+  min-height: 150px;
+  resize: vertical;
 }
 
 @media (max-width: 768px) {
-    .popup-content {
-        width: 90%;
-        padding: 1rem;
-    }
+  .popup-content {
+    width: 90%;
+    padding: 1rem;
+  }
+}
+
+/* 
+  ----------------------------------------------
+  MOBILE HAMBURGER "X" ANIMATION (<= 600px)
+  ----------------------------------------------
+*/
+@media (max-width: 600px) {
+  #contact,
+  footer {
+    height: 40vh;
+  }
+  #profile {
+    height: 83vh;
+    margin-bottom: 0;
+  }
+  article {
+    font-size: 1rem;
+  }
+  footer nav {
+    height: fit-content;
+    margin-bottom: 2rem;
+  }
+  .about-containers,
+  .contact-info-upper-container,
+  .btn-container {
+    flex-wrap: wrap;
+  }
+  .contact-info-container {
+    margin: 0;
+  }
+  .contact-info-container p,
+  .nav-links li a {
+    font-size: 1rem;
+  }
+  .experience-sub-title {
+    font-size: 1.25rem;
+  }
+  .logo {
+    font-size: 1.5rem;
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+  .section__pic-container {
+    width: auto;
+    height: 46vw;
+    justify-content: center;
+  }
+  .section__text__p2 {
+    font-size: 1.25rem;
+  }
+  .title {
+    font-size: 2rem;
+  }
+  .text-container {
+    text-align: justify;
+  }
+
+  /*
+    Make the bars rotate neatly into an X
+    Adjust translate() as needed to center your lines.
+  */
+  .hamburger-icon.open span:first-child {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .hamburger-icon.open span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger-icon.open span:last-child {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
 }
