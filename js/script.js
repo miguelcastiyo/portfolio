@@ -31,19 +31,45 @@ function handleSubmit(event) {
     const originalText = btn.textContent;
     btn.textContent = 'sending...';
     btn.disabled = true;
-
+  
+    // Send the form with EmailJS
     emailjs.sendForm('service_q0a47cm', 'template_o5l7vlq', this)
-        .then(() => {
-            alert('Message sent successfully!');
-            event.target.reset();
-            togglePopup();
-        })
-        .catch((error) => {
-            alert('Failed to send message. Please try again.');
-            console.log('EmailJS Error:', error);
-        })
-        .finally(() => {
-            btn.textContent = originalText;
-            btn.disabled = false;
-        });
-}
+      .then(() => {
+        // 1) Reset form fields
+        event.target.reset();
+  
+        // 2) Create a success message and display it in the popup
+        const successMsg = document.createElement('p');
+        successMsg.innerText = 'Message sent successfully!';
+        successMsg.style.color = 'green';
+        successMsg.style.textAlign = 'center';
+        event.target.appendChild(successMsg);
+  
+        // 3) Close the popup after a short delay
+        setTimeout(() => {
+          // remove the success message
+          successMsg.remove();
+          // close the popup
+          togglePopup();
+        }, 2000);
+      })
+      .catch((error) => {
+        console.error('EmailJS Error:', error);
+        
+        // Show a styled error message instead of alert
+        const errorMsg = document.createElement('p');
+        errorMsg.innerText = 'Failed to send. Please try again.';
+        errorMsg.style.color = 'red';
+        errorMsg.style.textAlign = 'center';
+        event.target.appendChild(errorMsg);
+  
+        // Optionally remove the error message after a few seconds
+        setTimeout(() => {
+          errorMsg.remove();
+        }, 3000);
+      })
+      .finally(() => {
+        btn.textContent = originalText;
+        btn.disabled = false;
+      });
+  }
