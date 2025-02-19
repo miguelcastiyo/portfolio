@@ -72,4 +72,4 @@ function handleSubmit(event) {
         btn.textContent = originalText;
         btn.disabled = false;
       });
-  }
+}
