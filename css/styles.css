@@ -635,3 +635,21 @@ footer p {
     transform: rotate(-45deg) translate(5px, -5px);
   }
 }
+
+/* 
+  ----------------------------------------------
+  Aligning contact form button to the right
+  ----------------------------------------------
+*/
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+#contact-form button {
+  /* Move the button to the right */
+  align-self: flex-end;
+}
